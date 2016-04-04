@@ -1,0 +1,18 @@
+﻿<div>
+    <h2>Add actor to movie:</h2>
+    <form ng-submit="controller.addActor()">
+        <label>First Name:</label>
+        <input type="text" ng-model="controller.firstName" /> <br />
+
+        <label>Last Name:</label>
+        <input type="text" ng-model="controller.lastName" /><br />
+
+        <label>Movies:</label>
+        <select 
+                ng-model="controller.selectedMovie" 
+                ng-options="movie.title for movie in controller.movies track by movie.movieId">
+        </select><br />
+
+        <input type="submit" value="Add" />
+    </form>
+</div>
